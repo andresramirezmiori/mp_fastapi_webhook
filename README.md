@@ -1,11 +1,11 @@
 # mp_fastapi_webhook
-Simple FastApi webhook based on the [official php version](https://github.com/messengerpeople/simple-php-webhook) of MessengerPeople.
+Simple FastApi WebHook based on the [official php version](https://github.com/messengerpeople/simple-php-webhook) of MessengerPeople.
 
 MessengerPeople recomendation:
 > We strongly suggest to keep webhooks simple and fast and handle processing logic async. This webhook contains an example message for testing. You can navigate to https://app.messengerpeople.dev/monitoring/ to see all your incoming and outgoing messages. The field "webhook_request" contains the payload that would be sent to your webhook."
 
 ## Code
-In the [main.py](/main.py) you can find the complete code that implements the webhook.To calm the anxiety, below is the portion corresponding to the webhook endpoint.
+In the [main.py](/main.py) file you can find the complete code that implements the webhook.To calm the anxiety, below is the WebHook Endpoint code portion.
 
 ```python
 @app.post("/webhook/")
@@ -38,7 +38,7 @@ async def webhook_handler(background_tasks: BackgroundTasks, req: Request):
 ```
 
 ## Serve on Deta
-It's very simple serve the webhook with a [Deta](https://web.deta.sh/) account(check the offical [deta FastApi guide](https://docs.deta.sh/docs/tutorials/fast-api-guide)).
+It's very simple to serve the WebHook with a [Deta](https://web.deta.sh/) account(check the offical [deta FastApi guide](https://docs.deta.sh/docs/tutorials/fast-api-guide)).
 
 On the base repo folder:
 
