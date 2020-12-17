@@ -5,7 +5,7 @@ MessengerPeople recomendation:
 > We strongly suggest to keep webhooks simple and fast and handle processing logic async. This webhook contains an example message for testing. You can navigate to https://app.messengerpeople.dev/monitoring/ to see all your incoming and outgoing messages. The field "webhook_request" contains the payload that would be sent to your webhook."
 
 ## Code
-In the [main.py](/main.py) you can find all the code thats implements the webhook, just to calm the anxiety, below is the portion corresponding to the webhook endpoint.
+In the [main.py](/main.py) you can find the complete code that implements the webhook.To calm the anxiety, below is the portion corresponding to the webhook endpoint.
 
 ```python
 @app.post("/webhook/")
@@ -38,7 +38,9 @@ async def webhook_handler(background_tasks: BackgroundTasks, req: Request):
 ```
 
 ## Serve on Deta
-Having and account on [Deta](https://web.deta.sh/) it's very simple serve the webhook (check the offical [deta FastApi guide](https://docs.deta.sh/docs/tutorials/fast-api-guide)). On the base repo folder:
+It's very simple serve the webhook with a [Deta](https://web.deta.sh/) account(check the offical [deta FastApi guide](https://docs.deta.sh/docs/tutorials/fast-api-guide)).
+
+On the base repo folder:
 
 * Install deta CLI, then restart console
 ```bash
@@ -57,8 +59,8 @@ Successfully created a new micro
 	"http_auth": "enabled"
 }
 ```
-visit https://<your_deta_endpoint>/docs to see theFastApi autodocumentation
-* Disable deta auth: In these case of use we don`t want http_auth enabled
+visit https://<your_deta_endpoint>/docs to see the FastApi auto documentation
+* Disable deta auth: In these case of use we don`t want **http_auth** enabled
 ```bash
 $ deta auth disable
 ```
