@@ -22,6 +22,7 @@ async def webhook_handler(background_tasks: BackgroundTasks, req: Request):
     if 'challenge' in body and 'verification_token' in body:
         if (body['verification_token'] != VERIFICATION_TOKEN):
             raise HTTPException(status_code=403, detail='bad verification code')
+        # Add challenge to the response
         response = {"challenge": body['challenge']}
     else:
         # keep webhook simple and fast, 
