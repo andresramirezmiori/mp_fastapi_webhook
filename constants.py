@@ -1,3 +1,4 @@
+# MessengerPeople Example Body
 EXAMPLE_BODY = {
     "uuid": "abcdef12-1234-aaaa-4321-abcdef123456",
     "sender": "491721234567",
